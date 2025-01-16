@@ -1,0 +1,128 @@
+*{
+    box-sizing:border-box;
+}
+body{
+    background-color:rgb(178, 192, 192);
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+    min-height:900px;
+    min-width:1400px;
+}
+.outside{
+    display:flex;
+    justify-content:center;
+    align-items:center;
+}
+.container{
+    min-height:400px;
+    width:80%;
+    display:flex;
+    align-items: center;
+    justify-content:center;
+    border-radius:15px;
+    box-shadow:0 5px 10px rgb(201, 199, 199); 
+    background-color:#fff;
+}
+.cabinet{
+    width:50%;
+    border-radius:15px;
+}
+.text{
+    width:50%;
+    margin:0 5%;
+}
+.account{
+    display:flex;
+    align-items:center;
+    justify-content: space-evenly;
+}
+.face{
+    width:20%;
+    height:20%;
+    border-radius:100%;
+    margin-right:5%;
+}
+
+.hover-container {
+    position: relative;
+    
+}
+.share-icon{
+    cursor:pointer;
+}
+.menu {
+    position: absolute;
+    top: -50px;
+    width:200px;
+    height:50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    background: #c9c9fd;
+    padding: 5px 10px;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    opacity: 0;
+    visibility: hidden;
+}
+.menu img{
+    width:20px;
+    height:20px;
+}
+.menu.active {
+    opacity: 1;
+    visibility: visible;
+}
+.menutwo{
+    visibility: hidden;
+}
+
+
+@media(max-width:768px){
+    body{
+        min-width:100%;
+    }
+    .container{
+        flex-direction:column;
+    }
+    .cabinet{
+        width:100%;
+        height:40%;
+    } 
+    
+    .text h1{
+        font-size:25px;
+    }  
+    .text{
+        width:80%;
+        height:60%;
+        padding:5% 0;
+    }
+    .account.active{
+        background-color:#c9c9fd;
+        display:flex;
+        justify-content:space-around;
+        align-items:center;
+    }
+    .face.active {
+        display:none;
+    }
+    .profile.active{
+        display:none;
+        width:0%;
+    }
+    .menutwo.active{
+        visibility: visible;
+        display:flex;
+        justify-content: space-around;
+        align-items: center;
+        gap:10px;
+    }
+    .menu.active{
+        visibility: hidden;
+        
+    }
+    
+}
